@@ -16,8 +16,8 @@ $(document).ready(function(){
 	$("#no22").click(function(){$.get('http://192.168.1.30:1880/state?toggle=picture', function(data, status){update(data)});});
 	$("#no23").click(function(){$.get('http://192.168.1.30:1880/state?toggle=exit', function(data, status){update(data)});});
 	$("#no24").click(function(){$.get('http://192.168.1.30:1880/state?toggle=glass', function(data, status){update(data)});});
-	$("#no25").click(function(){$.get('http://192.168.1.30:1880/state?toggle=barrelsomke', function(data, status){update(data)});});
-	$("#no26").click(function(){$.get('http://192.168.1.30:1880/state?toggle=bomb', function(data, status){update(data)});});
+	$("#no25").click(function(){$.get('http://192.168.1.30:1880/state?toggle=barrelsmoke', function(data, status){update(data)});});
+	$("#no26").click(function(){$.get('http://192.168.1.30:1880/state?toggle=bombstart', function(data, status){update(data)});});
 	$("#no27").click(function(){$.get('http://192.168.1.30:1880/state?toggle=ceilingsmoke', function(data, status){update(data)});});
 
 
