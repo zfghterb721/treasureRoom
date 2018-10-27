@@ -559,8 +559,12 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
 
+}
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -591,6 +595,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
 }
 
 .row {

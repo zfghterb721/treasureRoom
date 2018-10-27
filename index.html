@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -13,27 +14,32 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="cs/navbar-top-fixed.css" rel="stylesheet">
-  </head>
 
-  <body>
+    <!-- Custom styles for this template -->
+   
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+<body>
+
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
+      <a class="navbar-brand" href="#" onclick="$.get('http://192.168.1.32:1880/pause', function(data, status){});">PAUSE</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.30:1880/resume', function(data, status){});">RESUME <span class="sr-only">(current)</span> </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.30:1880/end', function(data, status){});">END</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.30:1880/reset', function(data, status){});">RESET</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Control</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Manual</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Manual</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
@@ -43,17 +49,194 @@
       </div>
     </nav>
 
-    <main role="main" class="container">
-      <div class="jumbotron">
-      </div>
-    </main>
+
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>  </script>
+
+
+<div class="jumbotron"></div>
+
+<div id="container rounded">
+	<div class="row">
+		<div class="col-sm-2">
+
+<div id="container1"> 
+
+  <div id="no1"><a href="#">Light Puzzle</a></div>
+<div id="line1"></div>
+<div id="no2"><a href="#">Computer Puzzle</a></div>
+<div id="line1"></div>
+<div id="no3"><a href="#">Dial Phone</a></div>
+<div id="line1"></div>
+<div id="no4"><a href="#">Solve Retina Puzzle</a></div>
+<div id="line1"></div>
+<div id="no5"><a href="#">Defuse Bomb</a></div>
+</div>
+</div>
+	<div class="col-sm-10">
+	   <iframe src="google.com" height="500" width="90%" seamless="seamless"></iframe>
+	   </div>
+
+
+</div>
+</div>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-xl">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="modal-title">MANUAL MODE</h4>
+      </div>
+ <div class="modal-body">
+	 <div class="row">
+		 <div class ="col-sm-4">
+	   <p class="text-center"><font size="18">Read Only</font></p>
+	   </div>
+	   <div class ="col-sm-1"></div>
+	   <div class ="col-sm-6">
+		   <p class="text-center"><font size="18">Read & Control</font></p> 
+		   </div>
+
+	 </div>
+	<div id="container">
+		<div class="row">
+			<div class="col-sm-2">
+
+				<div id="container1"> 
+
+					<div id="no6"><a>Switch Puzzle</a></div>
+					<div id="line2"></div>
+					<div id="no7"><a>Breaker Puzzle</a></div>
+					<div id="line2"></div>
+					<div id="no8"><a>Thermostat Puzzle</a></div>
+					<div id="line2"></div>
+					<div id="no9"><a>Surge Puzzle</a></div>
+					<div id="line2"></div>
+					<div id="no10"><a>Eye Puzzle</a></div>
+
+
+
+
+				</div>
+			</div>
+			
+			<div class="col-sm-2">
+
+				<div id="container1"> 
+
+					<div id="no11"><a href="#">Microphone Puzzle</a></div>
+					<div id="line2"></div>
+					<div id="no12"><a href="#">Laser Sensor</a></div>
+					<div id="line2"></div>
+					<div id="no5"><a href="#">Bomb Puzzle</a></div>
+					<div id="line2"></div>
+			<!-- Spare Inputs
+					<div id="no4"><a href="#">Spare</a></div>
+					<div id="line2"></div>
+					<div id="no5"><a href="#">Spare</a></div>
+					-->
+
+
+
+
+				</div>
+			</div>		
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2">
+
+				<div id="container1"> 
+
+					<div id="no13"><a href="#">Lasers</a></div>
+					<div id="line2"></div>
+					<div id="no14"><a href="#">Lamp</a></div>
+					<div id="line2"></div>
+					<div id="no15"><a href="#">Reset Timer</a></div>
+					<div id="line2"></div>
+					<div id="no16"><a href="#">Eye Scanner On</a></div>
+					<div id="line2"></div>
+					<div id="no17"><a href="#">Laser Smoke</a></div>
+
+
+
+
+				</div>
+			</div>
+			
+			<div class="col-sm-2">
+
+				<div id="container1"> 
+
+					<div id="no18"><a href="#">Siren</a></div>
+					<div id="line2"></div>
+					<div id="no19"><a href="#">Front Lights</a></div>
+					<div id="line2"></div>
+					<div id="no20"><a href="#">Back Lights</a></div>
+					<div id="line2"></div>
+					<div id="no21"><a href="#">Dim Lights</a></div>
+					<div id="line2"></div>
+					<div id="no22"><a href="#">Picture</a></div>
+
+
+
+
+				</div>
+			</div>
+			
+			<div class="col-sm-2">
+
+				<div id="container1"> 
+
+					<div id="no23"><a href="#">Exit Door</a></div>
+					<div id="line2"></div>
+					<div id="no24"><a href="#">Glass Door</a></div>
+					<div id="line2"></div>
+					<div id="no25"><a href="#">Barrel Smoke</a></div>
+					<div id="line2"></div>
+					<div id="no26"><a href="#">Bomb</a></div>
+					<div id="line2"></div>
+					<div id="no27"><a href="#">Ceiling Smoke</a></div>
+
+
+
+
+				</div>
+			</div>
+
+			
+			
+			
+				
+		</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
   </body>
+  
+
+
+
+
+
+<div style="clear:both"></div>
+
 </html>
