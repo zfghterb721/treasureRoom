@@ -5411,7 +5411,7 @@ button.close {
   left: 0;
   z-index: 1050;
   display: none;
-  overflow: hidden;
+  overflow: auto;
   outline: 0;
 }
 
@@ -5552,7 +5552,7 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 1500px;
     margin: 1.75rem auto;
   }
   .modal-dialog-centered {

@@ -55,203 +55,203 @@ function update(data) {
 		
 		
 		if(data.lights==0){
-			$("#no1 a").css('background','rgb(0,255,0)'),
+			$("#no1").css('background','rgb(0,255,0)')//,
 			$("#no1").children().html("Light Solved")
 		}
-		else{$("#no1 a").css('background','rgb(255,0,0)'),
-			$("#no2").children().html("Light Unsolved")
+		else{$("#no1").css('background','rgb(255,0,0)')//,
+			$("#no1").children().html("Light Unsolved")
 		}
 		if(data.laser==1){
-			$("#no2 a").css('background','rgb(0,255,0)'),
+			$("#no2").css('background','rgb(0,255,0)'),
 			$("#no2").children().html("Computer Solved")
 		}
-		else{$("#no2 a").css('background','rgb(255,0,0)'),
+		else{$("#no2").css('background','rgb(255,0,0)'),
 			$("#no2").children().html("Computer Unsolved")
 		}
 		if(data.picture==0){
-			$("#no3 a").css('background','rgb(0,255,0)'),
+			$("#no3").css('background','rgb(0,255,0)'),
 			$("#no3").children().html("Phone Dialed")
 		}
-		else{$("#no3 a").css('background','rgb(255,0,0)'),
+		else{$("#no3").css('background','rgb(255,0,0)'),
 			$("#no3").children().html("Phone Not Dialed")
 		}
 		if(data.glass==0){
-			$("#no4 a").css('background','rgb(0,255,0)'),
+			$("#no4").css('background','rgb(0,255,0)'),
 			$("#no4").children().html("Retina Solved")
 		}
-		else{$("#no4 a").css('background','rgb(255,0,0)'),
+		else{$("#no4").css('background','rgb(255,0,0)'),
 			$("#no4").children().html("Retina Unsolved")
 		}
-		if(data.bomb==0){
-			$("#no5 a").css('background','rgb(0,255,0)'),
+		if(data.bomb==1){
+			$("#no5").css('background','rgb(0,255,0)'),
 			$("#no5").children().html("Bomb Defused")
 		}
-		else{$("#no5 a").css('background','rgb(255,0,0)'),
-			$("#no5").children().html("Bomb Inactive")
+		else{$("#no5").css('background','rgb(255,0,0)'),
+			$("#no5").children().html("Bomb Not Defused")
 		}
 		
 		
 		//read state only
 		if(data.bombp==0){
-			$("#no28 a").css('background','rgb(0,255,0)'),
+			$("#no28").css('background','rgb(0,255,0)'),
 			$("#no28").children().html("Bomb Defused")
 		}
-		else{$("#no28 a").css('background','rgb(255,0,0)'),
+		else{$("#no28").css('background','rgb(255,0,0)'),
 			$("#no28").children().html("Bomb Inactive")
 		}
 		if(data.switchp==1){
-			$("#no6 a").css('background','rgb(0,255,0)'),
+			$("#no6").css('background','rgb(0,255,0)'),
 			$("#no6").children().html("Switch Solved")
 		}
-		else{$("#no6 a").css('background','rgb(255,0,0)'),
+		else{$("#no6").css('background','rgb(255,0,0)'),
 			$("#no6").children().html("Switch Unsolved")
 		}
 		if(data.breakerp==1){
-			$("#no7 a").css('background','rgb(0,255,0)'),
+			$("#no7").css('background','rgb(0,255,0)'),
 			$("#no7").children().html("Breaker Solved")
 		}
-		else{$("#no7 a").css('background','rgb(255,0,0)'),
+		else{$("#no7").css('background','rgb(255,0,0)'),
 			$("#no7").children().html("Breaker Unsolved")
 		}
 		if(data.thermp==1){
-			$("#no8 a").css('background','rgb(0,255,0)'),
+			$("#no8").css('background','rgb(0,255,0)'),
 			$("#no8").children().html("Thermostat Solved")
 		}
-		else{$("#no8 a").css('background','rgb(255,0,0)'),
+		else{$("#no8").css('background','rgb(255,0,0)'),
 			$("#no8").children().html("Thermostat Unsolved")
 		}
 		if(data.surgep==1){
-			$("#no9 a").css('background','rgb(0,255,0)'),
+			$("#no9").css('background','rgb(0,255,0)'),
 			$("#no9").children().html("Surge Solved")
 		}
-		else{$("#no9 a").css('background','rgb(255,0,0)'),
+		else{$("#no9").css('background','rgb(255,0,0)'),
 			$("#no9").children().html("Surge Unsolved")
 		}
 		if(data.eyep==1){
-			$("#no10 a").css('background','rgb(0,255,0)'),
+			$("#no10").css('background','rgb(0,255,0)'),
 			$("#no10").children().html("Eye Solved")
 		}
-		else{$("#no10 a").css('background','rgb(255,0,0)'),
+		else{$("#no10").css('background','rgb(255,0,0)'),
 			$("#no10").children().html("Eye Unsolved")
 		}
 		if(data.microphonep==1){
-			$("#no11 a").css('background','rgb(0,255,0)'),
+			$("#no11").css('background','rgb(0,255,0)'),
 			$("#no11").children().html("Microphone Solved")
 		}
-		else{$("#no11 a").css('background','rgb(255,0,0)'),
+		else{$("#no11").css('background','rgb(255,0,0)'),
 			$("#no11").children().html("Microphone Unsolved")
 		}
 		if(data.alarmp==1){
-			$("#no12 a").css('background','rgb(0,255,0)'),
+			$("#no12").css('background','rgb(0,255,0)'),
 			$("#no12").children().html("Laser Tripped")
 		}
-		else{$("#no12 a").css('background','rgb(255,0,0)'),
+		else{$("#no12").css('background','rgb(255,0,0)'),
 			$("#no12").children().html("Laser Normal")
 		}
 		
 		
 		//Read and Write states
 		if(data.laser==0){
-			$("#no13 a").css('background','rgb(0,255,0)'),
+			$("#no13").css('background','rgb(0,255,0)'),
 			$("#no13").children().html("Laser On")
 		}
-		else{$("#no13 a").css('background','rgb(255,0,0)'),
+		else{$("#no13").css('background','rgb(255,0,0)'),
 			$("#no13").children().html("Laser Off")
 		}
 		if(data.lamp==1){
-			$("#no14 a").css('background','rgb(0,255,0)'),
+			$("#no14").css('background','rgb(0,255,0)'),
 			$("#no14").children().html("Lamp On")
 		}
-		else{$("#no14 a").css('background','rgb(255,0,0)'),
+		else{$("#no14").css('background','rgb(255,0,0)'),
 			$("#no14").children().html("Lamp Off")
 		}
 		if(data.resettimer==1){
-			$("#no15 a").css('background','rgb(0,255,0)')
+			$("#no15").css('background','rgb(0,255,0)')
 		}
-		else{$("#no15 a").css('background','rgb(255,0,0)')
+		else{$("#no15").css('background','rgb(255,0,0)')
 		}
 		if(data.eyeon==1){
-			$("#no16 a").css('background','rgb(0,255,0)'),
+			$("#no16").css('background','rgb(0,255,0)'),
 			$("#no16").children().html("Eye Scanner On")
 		}
-		else{$("#no16 a").css('background','rgb(255,0,0)'),
+		else{$("#no16").css('background','rgb(255,0,0)'),
 			$("#no16").children().html("Eye Scanner Off")
 		}
 		if(data.lasersmoke==1){
-			$("#no17 a").css('background','rgb(0,255,0)'),
+			$("#no17").css('background','rgb(0,255,0)'),
 			$("#no17").children().html("Laser Smoke On")
 		}
-		else{$("#no17 a").css('background','rgb(255,0,0)'),
+		else{$("#no17").css('background','rgb(255,0,0)'),
 			$("#no17").children().html("Laser Smoke Off")
 		}
 		if(data.siren==1){
-			$("#no18 a").css('background','rgb(0,255,0)'),
+			$("#no18").css('background','rgb(0,255,0)'),
 			$("#no18").children().html("Siren On")
 		}
-		else{$("#no18 a").css('background','rgb(255,0,0)'),
+		else{$("#no18").css('background','rgb(255,0,0)'),
 			$("#no18").children().html("Siren Off")
 		}
 		if(data.frontlights==0){
-			$("#no19 a").css('background','rgb(0,255,0)'),
+			$("#no19").css('background','rgb(0,255,0)'),
 			$("#no19").children().html("Front Lights On")
 		}
-		else{$("#no19 a").css('background','rgb(255,0,0)'),
+		else{$("#no19").css('background','rgb(255,0,0)'),
 			$("#no19").children().html("Front Lights Off")
 		}
 		if(data.backlights==0){
-			$("#no20 a").css('background','rgb(0,255,0)'),
+			$("#no20").css('background','rgb(0,255,0)'),
 			$("#no20").children().html("Back Lights On")
 		}
-		else{$("#no20 a").css('background','rgb(255,0,0)'),
+		else{$("#no20").css('background','rgb(255,0,0)'),
 			$("#no20").children().html("Back Lights Off")
 		}
 		if(data.dim==1){
-			$("#no21 a").css('background','rgb(0,255,0)'),
+			$("#no21").css('background','rgb(0,255,0)'),
 			$("#no21").children().html("Lights Dim")
 		}
-		else{$("#no21 a").css('background','rgb(255,0,0)'),
+		else{$("#no21").css('background','rgb(255,0,0)'),
 			$("#no21").children().html("Lights Bright")
 		}
 		if(data.picture==1){
-			$("#no22 a").css('background','rgb(0,255,0)'),
+			$("#no22").css('background','rgb(0,255,0)'),
 			$("#no22").children().html("Picture Locked")
 		}
-		else{$("#no22 a").css('background','rgb(255,0,0)'),
+		else{$("#no22").css('background','rgb(255,0,0)'),
 			$("#no22").children().html("Picture Unlocked")
 		}
 		if(data.exit==0){
-			$("#no23 a").css('background','rgb(0,255,0)'),
+			$("#no23").css('background','rgb(0,255,0)'),
 			$("#no23").children().html("Exit Door Unlocked")
 		}
-		else{$("#no23 a").css('background','rgb(255,0,0)'),
+		else{$("#no23").css('background','rgb(255,0,0)'),
 			$("#no23").children().html("Exit Door Locked")
 		}
 		if(data.glass==0){
-			$("#no24 a").css('background','rgb(0,255,0)'),
+			$("#no24").css('background','rgb(0,255,0)'),
 			$("#no24").children().html("Glass Door Unlocked")
 		}
-		else{$("#no24 a").css('background','rgb(255,0,0)'),
+		else{$("#no24").css('background','rgb(255,0,0)'),
 			$("#no24").children().html("Glass Door Locked")
 		}
 		if(data.barrelsmoke==1){
-			$("#no25 a").css('background','rgb(0,255,0)'),
+			$("#no25").css('background','rgb(0,255,0)'),
 			$("#no25").children().html("Barrel Smoke On")
 		}
-		else{$("#no25 a").css('background','rgb(255,0,0)'),
+		else{$("#no25").css('background','rgb(255,0,0)'),
 			$("#no25").children().html("Barrel Smoke Off")
 		}
 		if(data.bombstart==1){
-			$("#no26 a").css('background','rgb(0,255,0)'),
+			$("#no26").css('background','rgb(0,255,0)'),
 			$("#no26").children().html("Bomb Started")
 		}
-		else{$("#no26 a").css('background','rgb(255,0,0)'),
+		else{$("#no26").css('background','rgb(255,0,0)'),
 			$("#no26").children().html("Bomb Not Started")
 		}
 		if(data.ceilingsmoke==1){
-			$("#no27 a").css('background','rgb(0,255,0)'),
+			$("#no27").css('background','rgb(0,255,0)'),
 			$("#no27").children().html("Ceiling Smoke On")
 		}
-		else{$("#no27 a").css('background','rgb(255,0,0)'),
+		else{$("#no27").css('background','rgb(255,0,0)'),
 			$("#no27").children().html("Ceiling Smoke Off")
 		}
 }
