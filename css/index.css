@@ -11,6 +11,9 @@ h1 {
     font-size:18px;
     text-align:center;
     margin:auto;
+    line-height: 10px;
+
+    
     
 
  }  
@@ -19,24 +22,23 @@ h1 {
     color:#000;
     text-decoration:none;
     background-color:#f6f6ff;
+   
+
 
  }
 
  
-#no1 {
-    width:190px;
-    line-height:60px;
-    border:1px solid #000;
-    margin:auto;
- }
  #no1 {
-    width:190px;
+    width:100%;
     line-height:60px;
+    text-align: center;
     border:1px solid #000;
     margin:auto;
  }
+
 #no1 a {
     height:60px;
+  
  }
 #line1 {
     font-size:0;
@@ -57,16 +59,17 @@ h1 {
     margin-left:50%;
  } 
 #no2 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
+
  }
  #no2 a {
     height:60px;
     }
 #no3 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -75,7 +78,7 @@ h1 {
     height:60px;
     }
 #no4 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -84,7 +87,7 @@ h1 {
     height:60px;
     }
 #no5 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -93,7 +96,7 @@ h1 {
     height:60px;
     }
 #no6 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -102,7 +105,7 @@ h1 {
     height:60px;
     }    
 #no7 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -111,7 +114,7 @@ h1 {
     height:60px;
 }  
 #no8 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -120,7 +123,7 @@ h1 {
     height:60px;
 }
 #no9 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -129,7 +132,7 @@ h1 {
     height:60px;
 }
 #no10 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -138,7 +141,7 @@ h1 {
     height:60px;
 }
 #no11 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -147,7 +150,7 @@ h1 {
     height:60px;
 }
 #no12 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -156,7 +159,7 @@ h1 {
     height:60px;
 }
 #no13 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -165,7 +168,7 @@ h1 {
     height:60px;
 }
 #no14 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -174,7 +177,7 @@ h1 {
     height:60px;
 }
 #no15 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -183,7 +186,7 @@ h1 {
     height:60px;
 }
 #no16 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -192,7 +195,7 @@ h1 {
     height:60px;
 }
 #no17 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -201,7 +204,7 @@ h1 {
     height:60px;
 }
 #no18 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -210,7 +213,7 @@ h1 {
     height:60px;
 }
 #no19 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -219,7 +222,7 @@ h1 {
     height:60px;
 }
 #no20 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -228,7 +231,7 @@ h1 {
     height:60px;
 }
 #no21 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -237,7 +240,7 @@ h1 {
     height:60px;
 }
 #no22 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -246,7 +249,7 @@ h1 {
     height:60px;
 }
 #no23 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -255,7 +258,7 @@ h1 {
     height:60px;
 }
 #no24 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -264,7 +267,7 @@ h1 {
     height:60px;
 }
 #no25 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -273,7 +276,7 @@ h1 {
     height:60px;
 }
 #no26 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -282,7 +285,7 @@ h1 {
     height:60px;
 }
 #no27 {
-    width:190px;
+    width:100%;
     line-height:60px;
     border:1px solid #000;
     margin:auto;
@@ -296,7 +299,7 @@ h1 {
 .clear {
     clear:both;
  }             
- @media (min-width: 768px){
+ @media (min-width: 1400px){
 	.modal-xl{
 		width: 90%;
 		max-width:2000px;
