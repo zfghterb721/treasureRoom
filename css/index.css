@@ -27,6 +27,7 @@ h1 {
 
  }
 
+ #currentstatus{}
  
  #no1 {
     width:100%;
@@ -293,7 +294,16 @@ h1 {
 #no27 a {
     height:60px;
 }
-       
+#no28 {
+    width:100%;
+    line-height:60px;
+    border:1px solid #000;
+    margin:auto;
+    }
+#no28 a {
+    height:60px;
+}
+          
     
     
 .clear {

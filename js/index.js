@@ -31,73 +31,122 @@ $(document).ready(function(){
 
 function update(data) { 
 		//main page flow
-		if(data.lights==0){
-			$("#no1 a").css('background','rgb(0,255,0)')
+		if(data.status=="reset"){
+			$("#currentstatus").css('color','rgb(0,255,0)'),
+			$("#currentstatus").html("Running")
 		}
-		else{$("#no1 a").css('background','rgb(255,0,0)')
+		else{}
+		if(data.status=="pause"){
+			$("#currentstatus").css('color','rgb(255,255,0)'),
+			$("#currentstatus").html("Paused")
+		}
+		else{}
+		if(data.status=="end"){
+			$("#currentstatus").css('color','rgb(255,0,0)'),
+			$("#currentstatus").html("Ended")
+		}
+		else{}
+		if(data.status=="resume"){
+			$("#currentstatus").css('color','rgb(0,255,0)'),
+			$("#currentstatus").html("Running")
+		}
+		else{}
+		
+		
+		
+		if(data.lights==0){
+			$("#no1 a").css('background','rgb(0,255,0)'),
+			$("#no1").children().html("Light Solved")
+		}
+		else{$("#no1 a").css('background','rgb(255,0,0)'),
+			$("#no2").children().html("Light Unsolved")
 		}
 		if(data.laser==1){
-			$("#no2 a").css('background','rgb(0,255,0)')
+			$("#no2 a").css('background','rgb(0,255,0)'),
+			$("#no2").children().html("Computer Solved")
 		}
-		else{$("#no2 a").css('background','rgb(255,0,0)')
+		else{$("#no2 a").css('background','rgb(255,0,0)'),
+			$("#no2").children().html("Computer Unsolved")
 		}
 		if(data.picture==0){
-			$("#no3 a").css('background','rgb(0,255,0)')
+			$("#no3 a").css('background','rgb(0,255,0)'),
+			$("#no3").children().html("Phone Dialed")
 		}
-		else{$("#no3 a").css('background','rgb(255,0,0)')
+		else{$("#no3 a").css('background','rgb(255,0,0)'),
+			$("#no3").children().html("Phone Not Dialed")
 		}
 		if(data.glass==0){
-			$("#no4 a").css('background','rgb(0,255,0)')
+			$("#no4 a").css('background','rgb(0,255,0)'),
+			$("#no4").children().html("Retina Solved")
 		}
-		else{$("#no4 a").css('background','rgb(255,0,0)')
+		else{$("#no4 a").css('background','rgb(255,0,0)'),
+			$("#no4").children().html("Retina Unsolved")
 		}
 		if(data.bomb==0){
-			$("#no5 a").css('background','rgb(0,255,0)')
+			$("#no5 a").css('background','rgb(0,255,0)'),
+			$("#no5").children().html("Bomb Defused")
 		}
-		else{$("#no5 a").css('background','rgb(255,0,0)')
+		else{$("#no5 a").css('background','rgb(255,0,0)'),
+			$("#no5").children().html("Bomb Inactive")
 		}
 		
 		
 		//read state only
 		if(data.bombp==0){
-			$("#no5 a").css('background','rgb(0,255,0)')
+			$("#no28 a").css('background','rgb(0,255,0)'),
+			$("#no28").children().html("Bomb Defused")
 		}
-		else{$("#no5 a").css('background','rgb(255,0,0)')
+		else{$("#no28 a").css('background','rgb(255,0,0)'),
+			$("#no28").children().html("Bomb Inactive")
 		}
 		if(data.switchp==1){
-			$("#no6 a").css('background','rgb(0,255,0)')
+			$("#no6 a").css('background','rgb(0,255,0)'),
+			$("#no6").children().html("Switch Solved")
 		}
-		else{$("#no6 a").css('background','rgb(255,0,0)')
+		else{$("#no6 a").css('background','rgb(255,0,0)'),
+			$("#no6").children().html("Switch Unsolved")
 		}
 		if(data.breakerp==1){
-			$("#no7 a").css('background','rgb(0,255,0)')
+			$("#no7 a").css('background','rgb(0,255,0)'),
+			$("#no7").children().html("Breaker Solved")
 		}
-		else{$("#no7 a").css('background','rgb(255,0,0)')
+		else{$("#no7 a").css('background','rgb(255,0,0)'),
+			$("#no7").children().html("Breaker Unsolved")
 		}
 		if(data.thermp==1){
-			$("#no8 a").css('background','rgb(0,255,0)')
+			$("#no8 a").css('background','rgb(0,255,0)'),
+			$("#no8").children().html("Thermostat Solved")
 		}
-		else{$("#no8 a").css('background','rgb(255,0,0)')
+		else{$("#no8 a").css('background','rgb(255,0,0)'),
+			$("#no8").children().html("Thermostat Unsolved")
 		}
 		if(data.surgep==1){
-			$("#no9 a").css('background','rgb(0,255,0)')
+			$("#no9 a").css('background','rgb(0,255,0)'),
+			$("#no9").children().html("Surge Solved")
 		}
-		else{$("#no9 a").css('background','rgb(255,0,0)')
+		else{$("#no9 a").css('background','rgb(255,0,0)'),
+			$("#no9").children().html("Surge Unsolved")
 		}
 		if(data.eyep==1){
-			$("#no10 a").css('background','rgb(0,255,0)')
+			$("#no10 a").css('background','rgb(0,255,0)'),
+			$("#no10").children().html("Eye Solved")
 		}
-		else{$("#no10 a").css('background','rgb(255,0,0)')
+		else{$("#no10 a").css('background','rgb(255,0,0)'),
+			$("#no10").children().html("Eye Unsolved")
 		}
 		if(data.microphonep==1){
-			$("#no11 a").css('background','rgb(0,255,0)')
+			$("#no11 a").css('background','rgb(0,255,0)'),
+			$("#no11").children().html("Microphone Solved")
 		}
-		else{$("#no11 a").css('background','rgb(255,0,0)')
+		else{$("#no11 a").css('background','rgb(255,0,0)'),
+			$("#no11").children().html("Microphone Unsolved")
 		}
 		if(data.alarmp==1){
-			$("#no12 a").css('background','rgb(0,255,0)')
+			$("#no12 a").css('background','rgb(0,255,0)'),
+			$("#no12").children().html("Laser Tripped")
 		}
-		else{$("#no12 a").css('background','rgb(255,0,0)')
+		else{$("#no12 a").css('background','rgb(255,0,0)'),
+			$("#no12").children().html("Laser Normal")
 		}
 		
 		
