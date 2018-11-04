@@ -22,20 +22,18 @@
 
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#" onclick="$.get('http://192.168.1.30:1880/pause', function(data, status){});">PAUSE</a>
+      <a class="navbar-brand" href="#" onclick="$.get('http://192.168.1.80:1880/pause', function(data, status){});">PAUSE</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
+         
           <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.30:1880/resume', function(data, status){});">RESUME <span class="sr-only">(current)</span> </a>
+            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/end', function(data, status){});">END</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.30:1880/end', function(data, status){});">END</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.30:1880/reset', function(data, status){});">RESET</a>
+            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/reset', function(data, status){});">RESET</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Manual</a>

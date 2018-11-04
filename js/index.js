@@ -6,21 +6,11 @@ window.setInterval(function(){
 
 
 $(document).ready(function(){
-	$("#no13").click(function(){$.get('http://192.168.1.30:1880/state?toggle=laser', function(data, status){update(data)});});
-	$("#no14").click(function(){$.get('http://192.168.1.30:1880/state?toggle=lamp', function(data, status){update(data)});});
-	$("#no15").click(function(){$.get('http://192.168.1.30:1880/state?toggle=resettimer', function(data, status){update(data)});});
-	$("#no16").click(function(){$.get('http://192.168.1.30:1880/state?toggle=eyeon', function(data, status){update(data)});});
-	$("#no17").click(function(){$.get('http://192.168.1.30:1880/state?toggle=lasersmoke', function(data, status){update(data)});});
-	$("#no18").click(function(){$.get('http://192.168.1.30:1880/state?toggle=siren', function(data, status){update(data)});});
-	$("#no19").click(function(){$.get('http://192.168.1.30:1880/state?toggle=frontlights', function(data, status){update(data)});});
-	$("#no20").click(function(){$.get('http://192.168.1.30:1880/state?toggle=backlights', function(data, status){update(data)});});
-	$("#no21").click(function(){$.get('http://192.168.1.30:1880/state?toggle=dim', function(data, status){update(data)});});
-	$("#no22").click(function(){$.get('http://192.168.1.30:1880/state?toggle=picture', function(data, status){update(data)});});
-	$("#no23").click(function(){$.get('http://192.168.1.30:1880/state?toggle=exit', function(data, status){update(data)});});
-	$("#no24").click(function(){$.get('http://192.168.1.30:1880/state?toggle=glass', function(data, status){update(data)});});
-	$("#no25").click(function(){$.get('http://192.168.1.30:1880/state?toggle=barrelsmoke', function(data, status){update(data)});});
-	$("#no26").click(function(){$.get('http://192.168.1.30:1880/state?toggle=bombstart', function(data, status){update(data)});});
-	$("#no27").click(function(){$.get('http://192.168.1.30:1880/state?toggle=ceilingsmoke', function(data, status){update(data)});});
+
+	$("#no13").click(function(){$.get('http://192.168.1.80:1880/state?toggle=brick', function(data, status){update(data)});});
+	$("#no14").click(function(){$.get('http://192.168.1.80:1880/state?toggle=garage', function(data, status){update(data)});});
+	$("#no15").click(function(){$.get('http://192.168.1.80:1880/state?toggle=torches', function(data, status){update(data)});});
+	$("#no16").click(function(){$.get('http://192.168.1.80:1880/state?toggle=blacklight', function(data, status){update(data)});});
 	$( "#hint" ).submit(function( event ) {
 		console.log($( "input:first" ).val());
 		$.get('http://192.168.1.31:1880/msg?message='+$( "input:first" ).val(), function(data, status){})
@@ -53,205 +43,132 @@ function update(data) {
 		else{}
 		
 		
-		
-		if(data.lights==0){
+		// main page flow chart buttons
+		if(data.statue==0){
 			$("#no1").css('background','rgb(0,255,0)')//,
-			$("#no1").children().html("Light Solved")
+			$("#no1").children().html("Statue Present")
 		}
 		else{$("#no1").css('background','rgb(255,0,0)')//,
-			$("#no1").children().html("Light Unsolved")
+			$("#no1").children().html("Statue Removed")
 		}
-		if(data.laser==1){
+		if(data.wordPuzzle==1){
 			$("#no2").css('background','rgb(0,255,0)'),
-			$("#no2").children().html("Computer Solved")
+			$("#no2").children().html("Word Puzzle Solved")
 		}
 		else{$("#no2").css('background','rgb(255,0,0)'),
-			$("#no2").children().html("Computer Unsolved")
+			$("#no2").children().html("Word Puzzle Unsolved")
 		}
-		if(data.picture==0){
+		if(data.key==0){
 			$("#no3").css('background','rgb(0,255,0)'),
-			$("#no3").children().html("Phone Dialed")
+			$("#no3").children().html("Key Puzzle Solved")
 		}
 		else{$("#no3").css('background','rgb(255,0,0)'),
-			$("#no3").children().html("Phone Not Dialed")
+			$("#no3").children().html("Key Puzzle Unsolved")
 		}
-		if(data.glass==0){
+		if(data.brick==0){
 			$("#no4").css('background','rgb(0,255,0)'),
-			$("#no4").children().html("Retina Solved")
+			$("#no4").children().html("Brick Present")
 		}
 		else{$("#no4").css('background','rgb(255,0,0)'),
-			$("#no4").children().html("Retina Unsolved")
+			$("#no4").children().html("Brick Removed")
 		}
-		if(data.bomb==1){
+		if(data.vase==1){
 			$("#no5").css('background','rgb(0,255,0)'),
-			$("#no5").children().html("Bomb Defused")
+			$("#no5").children().html("Vase Solved")
 		}
 		else{$("#no5").css('background','rgb(255,0,0)'),
-			$("#no5").children().html("Bomb Not Defused")
+			$("#no5").children().html("Vase Unsolved")
 		}
+		if(data.statue==0){
+			$("#no6").css('background','rgb(0,255,0)')//,
+			$("#no6").children().html("Statue Present")
+		}
+		else{$("#no6").css('background','rgb(255,0,0)')//,
+			$("#no6").children().html("Statue Removed")
+		}
+		if(data.wordPuzzle==1){
+			$("#no7").css('background','rgb(0,255,0)'),
+			$("#no7").children().html("Word Puzzle Solved")
+		}
+		else{$("#no7").css('background','rgb(255,0,0)'),
+			$("#no7").children().html("Word Puzzle Unsolved")
+		}
+		if(data.key==0){
+			$("#no8").css('background','rgb(0,255,0)'),
+			$("#no8").children().html("Key Puzzle Solved")
+		}
+		else{$("#no8").css('background','rgb(255,0,0)'),
+			$("#no8").children().html("Key Puzzle Unsolved")
+		}
+		if(data.brick==0){
+			$("#no9").css('background','rgb(0,255,0)'),
+			$("#no9").children().html("Brick Present")
+		}
+		else{$("#no9").css('background','rgb(255,0,0)'),
+			$("#no9").children().html("Brick Removed")
+		}
+		if(data.vase==1){
+			$("#no10").css('background','rgb(0,255,0)'),
+			$("#no10").children().html("Vase Solved")
+		}
+		else{$("#no10").css('background','rgb(255,0,0)'),
+			$("#no10").children().html("Vase Unsolved")
+		}
+		
 		
 		
 		//read state only
-		if(data.bombp==0){
-			$("#no28").css('background','rgb(0,255,0)'),
-			$("#no28").children().html("Bomb Defused")
-		}
-		else{$("#no28").css('background','rgb(255,0,0)'),
-			$("#no28").children().html("Bomb Inactive")
-		}
-		if(data.switchp==1){
-			$("#no6").css('background','rgb(0,255,0)'),
-			$("#no6").children().html("Switch Solved")
-		}
-		else{$("#no6").css('background','rgb(255,0,0)'),
-			$("#no6").children().html("Switch Unsolved")
-		}
-		if(data.breakerp==1){
-			$("#no7").css('background','rgb(0,255,0)'),
-			$("#no7").children().html("Breaker Solved")
-		}
-		else{$("#no7").css('background','rgb(255,0,0)'),
-			$("#no7").children().html("Breaker Unsolved")
-		}
-		if(data.thermp==1){
-			$("#no8").css('background','rgb(0,255,0)'),
-			$("#no8").children().html("Thermostat Solved")
-		}
-		else{$("#no8").css('background','rgb(255,0,0)'),
-			$("#no8").children().html("Thermostat Unsolved")
-		}
-		if(data.surgep==1){
-			$("#no9").css('background','rgb(0,255,0)'),
-			$("#no9").children().html("Surge Solved")
-		}
-		else{$("#no9").css('background','rgb(255,0,0)'),
-			$("#no9").children().html("Surge Unsolved")
-		}
-		if(data.eyep==1){
-			$("#no10").css('background','rgb(0,255,0)'),
-			$("#no10").children().html("Eye Solved")
-		}
-		else{$("#no10").css('background','rgb(255,0,0)'),
-			$("#no10").children().html("Eye Unsolved")
-		}
-		if(data.microphonep==1){
+		
+		if(data.sliderPuzzle==1){
 			$("#no11").css('background','rgb(0,255,0)'),
-			$("#no11").children().html("Microphone Solved")
+			$("#no11").children().html("Slider Puzzle Solved")
 		}
 		else{$("#no11").css('background','rgb(255,0,0)'),
-			$("#no11").children().html("Microphone Unsolved")
+			$("#no11").children().html("Slider Puzzle Unsolved")
 		}
-		if(data.alarmp==1){
+		if(data.shapePuzzle==1){
 			$("#no12").css('background','rgb(0,255,0)'),
-			$("#no12").children().html("Laser Tripped")
+			$("#no12").children().html("Shape Puzzle Solved")
 		}
 		else{$("#no12").css('background','rgb(255,0,0)'),
-			$("#no12").children().html("Laser Normal")
+			$("#no12").children().html("Shape Puzzle Unsolved")
 		}
 		
 		
 		//Read and Write states
-		if(data.laser==0){
+		if(data.mazePuzzle==0){
 			$("#no13").css('background','rgb(0,255,0)'),
-			$("#no13").children().html("Laser On")
+			$("#no13").children().html("Maze Puzzle Solved")
 		}
 		else{$("#no13").css('background','rgb(255,0,0)'),
-			$("#no13").children().html("Laser Off")
+			$("#no13").children().html("Maze Puzzle Unsolved")
 		}
-		if(data.lamp==1){
+		if(data.blacklight==1){
 			$("#no14").css('background','rgb(0,255,0)'),
-			$("#no14").children().html("Lamp On")
+			$("#no14").children().html("Blacklights on")
 		}
 		else{$("#no14").css('background','rgb(255,0,0)'),
-			$("#no14").children().html("Lamp Off")
+			$("#no14").children().html("Blacklights off")
 		}
-		if(data.resettimer==1){
-			$("#no15").css('background','rgb(0,255,0)')
+		if(data.safe==1){
+			$("#no15").css('background','rgb(0,255,0)'),
+			$("#no15").children().html("Safe Open")
 		}
-		else{$("#no15").css('background','rgb(255,0,0)')
+		else{$("#no15").css('background','rgb(255,0,0)'),
+			 $("#no15").children().html("Safe Closed")
 		}
-		if(data.eyeon==1){
+		if(data.garage==1){
 			$("#no16").css('background','rgb(0,255,0)'),
-			$("#no16").children().html("Eye Scanner On")
+			$("#no16").children().html("Garage On")
 		}
 		else{$("#no16").css('background','rgb(255,0,0)'),
-			$("#no16").children().html("Eye Scanner Off")
+			$("#no16").children().html("Garage Off")
 		}
-		if(data.lasersmoke==1){
+		if(data.brickMag==1){
 			$("#no17").css('background','rgb(0,255,0)'),
-			$("#no17").children().html("Laser Smoke On")
+			$("#no17").children().html("Brick Mag On")
 		}
 		else{$("#no17").css('background','rgb(255,0,0)'),
-			$("#no17").children().html("Laser Smoke Off")
-		}
-		if(data.siren==1){
-			$("#no18").css('background','rgb(0,255,0)'),
-			$("#no18").children().html("Siren On")
-		}
-		else{$("#no18").css('background','rgb(255,0,0)'),
-			$("#no18").children().html("Siren Off")
-		}
-		if(data.frontlights==0){
-			$("#no19").css('background','rgb(0,255,0)'),
-			$("#no19").children().html("Front Lights On")
-		}
-		else{$("#no19").css('background','rgb(255,0,0)'),
-			$("#no19").children().html("Front Lights Off")
-		}
-		if(data.backlights==0){
-			$("#no20").css('background','rgb(0,255,0)'),
-			$("#no20").children().html("Back Lights On")
-		}
-		else{$("#no20").css('background','rgb(255,0,0)'),
-			$("#no20").children().html("Back Lights Off")
-		}
-		if(data.dim==1){
-			$("#no21").css('background','rgb(0,255,0)'),
-			$("#no21").children().html("Lights Dim")
-		}
-		else{$("#no21").css('background','rgb(255,0,0)'),
-			$("#no21").children().html("Lights Bright")
-		}
-		if(data.picture==1){
-			$("#no22").css('background','rgb(0,255,0)'),
-			$("#no22").children().html("Picture Locked")
-		}
-		else{$("#no22").css('background','rgb(255,0,0)'),
-			$("#no22").children().html("Picture Unlocked")
-		}
-		if(data.exit==0){
-			$("#no23").css('background','rgb(0,255,0)'),
-			$("#no23").children().html("Exit Door Unlocked")
-		}
-		else{$("#no23").css('background','rgb(255,0,0)'),
-			$("#no23").children().html("Exit Door Locked")
-		}
-		if(data.glass==0){
-			$("#no24").css('background','rgb(0,255,0)'),
-			$("#no24").children().html("Glass Door Unlocked")
-		}
-		else{$("#no24").css('background','rgb(255,0,0)'),
-			$("#no24").children().html("Glass Door Locked")
-		}
-		if(data.barrelsmoke==1){
-			$("#no25").css('background','rgb(0,255,0)'),
-			$("#no25").children().html("Barrel Smoke On")
-		}
-		else{$("#no25").css('background','rgb(255,0,0)'),
-			$("#no25").children().html("Barrel Smoke Off")
-		}
-		if(data.bombstart==1){
-			$("#no26").css('background','rgb(0,255,0)'),
-			$("#no26").children().html("Bomb Started")
-		}
-		else{$("#no26").css('background','rgb(255,0,0)'),
-			$("#no26").children().html("Bomb Not Started")
-		}
-		if(data.ceilingsmoke==1){
-			$("#no27").css('background','rgb(0,255,0)'),
-			$("#no27").children().html("Ceiling Smoke On")
-		}
-		else{$("#no27").css('background','rgb(255,0,0)'),
-			$("#no27").children().html("Ceiling Smoke Off")
+			$("#no17").children().html("Brick Mag Off")
 		}
 }
