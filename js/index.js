@@ -1,5 +1,5 @@
 window.setInterval(function(){
-	$.get("http://192.168.1.30:1880/refresh").done(function(data){
+	$.get("http://192.168.1.80:1880/state").done(function(data){
 		update(data)})
 },1000);
 
@@ -7,15 +7,11 @@ window.setInterval(function(){
 
 $(document).ready(function(){
 
-	$("#no13").click(function(){$.get('http://192.168.1.80:1880/state?toggle=brick', function(data, status){update(data)});});
-	$("#no14").click(function(){$.get('http://192.168.1.80:1880/state?toggle=garage', function(data, status){update(data)});});
-	$("#no15").click(function(){$.get('http://192.168.1.80:1880/state?toggle=torches', function(data, status){update(data)});});
-	$("#no16").click(function(){$.get('http://192.168.1.80:1880/state?toggle=blacklight', function(data, status){update(data)});});
-	$( "#hint" ).submit(function( event ) {
-		console.log($( "input:first" ).val());
-		$.get('http://192.168.1.31:1880/msg?message='+$( "input:first" ).val(), function(data, status){})
-		event.preventDefault();
-	});
+	$("#no13").click(function(){$.get('http://192.168.1.81:1880/state?toggle=torch', function(data, status){update(data)});});
+	$("#no14").click(function(){$.get('http://192.168.1.81:1880/state?toggle=blacklight', function(data, status){update(data)});});
+	$("#no15").click(function(){$.get('http://192.168.1.81:1880/state?toggle=exit', function(data, status){update(data)});});
+	$("#no16").click(function(){$.get('http://192.168.1.81:1880/state?toggle=garage', function(data, status){update(data)});});
+	$("#no17").click(function(){$.get('http://192.168.1.81:1880/state?toggle=brickMag', function(data, status){update(data)});});
 
 })
 
@@ -58,7 +54,7 @@ function update(data) {
 		else{$("#no2").css('background','rgb(255,0,0)'),
 			$("#no2").children().html("Word Puzzle Unsolved")
 		}
-		if(data.key==0){
+		if(data.key==1){
 			$("#no3").css('background','rgb(0,255,0)'),
 			$("#no3").children().html("Key Puzzle Solved")
 		}
@@ -93,7 +89,7 @@ function update(data) {
 		else{$("#no7").css('background','rgb(255,0,0)'),
 			$("#no7").children().html("Word Puzzle Unsolved")
 		}
-		if(data.key==0){
+		if(data.key==1){
 			$("#no8").css('background','rgb(0,255,0)'),
 			$("#no8").children().html("Key Puzzle Solved")
 		}
@@ -119,29 +115,42 @@ function update(data) {
 		
 		//read state only
 		
-		if(data.sliderPuzzle==1){
+		if(data.slider1==1){
 			$("#no11").css('background','rgb(0,255,0)'),
-			$("#no11").children().html("Slider Puzzle Solved")
+			$("#no11").children().html("Slider 1 Solved")
 		}
 		else{$("#no11").css('background','rgb(255,0,0)'),
-			$("#no11").children().html("Slider Puzzle Unsolved")
+			$("#no11").children().html("Slider 1 Unsolved")
 		}
-		if(data.shapePuzzle==1){
+		if(data.slider2==1){
 			$("#no12").css('background','rgb(0,255,0)'),
-			$("#no12").children().html("Shape Puzzle Solved")
+			$("#no12").children().html("Slider 2 Solved")
 		}
 		else{$("#no12").css('background','rgb(255,0,0)'),
-			$("#no12").children().html("Shape Puzzle Unsolved")
+			$("#no12").children().html("Slider 2 Unsolved")
 		}
-		
+		if(data.maze1==1){
+			$("#no28").css('background','rgb(0,255,0)'),
+			$("#no28").children().html("Maze 1 Solved")
+		}
+		else{$("#no28").css('background','rgb(255,0,0)'),
+			$("#no28").children().html("Maze 1 Unsolved")
+		}
+		if(data.maze2==1){
+			$("#no29").css('background','rgb(0,255,0)'),
+			$("#no29").children().html("Maze 2 Solved")
+		}
+		else{$("#no29").css('background','rgb(255,0,0)'),
+			$("#no29").children().html("Maze 2 Unsolved")
+		}
 		
 		//Read and Write states
-		if(data.mazePuzzle==0){
+		if(data.torch==0){
 			$("#no13").css('background','rgb(0,255,0)'),
-			$("#no13").children().html("Maze Puzzle Solved")
+			$("#no13").children().html("Torches on")
 		}
 		else{$("#no13").css('background','rgb(255,0,0)'),
-			$("#no13").children().html("Maze Puzzle Unsolved")
+			$("#no13").children().html("Torches off")
 		}
 		if(data.blacklight==1){
 			$("#no14").css('background','rgb(0,255,0)'),
@@ -150,12 +159,12 @@ function update(data) {
 		else{$("#no14").css('background','rgb(255,0,0)'),
 			$("#no14").children().html("Blacklights off")
 		}
-		if(data.safe==1){
+		if(data.exit==1){
 			$("#no15").css('background','rgb(0,255,0)'),
-			$("#no15").children().html("Safe Open")
+			$("#no15").children().html("Exit locked")
 		}
 		else{$("#no15").css('background','rgb(255,0,0)'),
-			 $("#no15").children().html("Safe Closed")
+			$("#no15").children().html("Exit unlocked")
 		}
 		if(data.garage==1){
 			$("#no16").css('background','rgb(0,255,0)'),
