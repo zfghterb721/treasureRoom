@@ -27,12 +27,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-         
+          
+          <li class="nav-item active">
+            <a id= "timer" class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/startSound', function(data, status){}); setInterval(timer, 1000);">Start Timer & Sound</a>
+          </li>
+          
           <li class="nav-item active">
             <a id= "mutes" class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/toggleSound', function(data, status){});">SOUND</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/reset', function(data, status){});">RESET</a>
+            <a id= "resetme" class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/reset', function(data, status){}); setTimeout(resetting, 15000); $('#resetme').html('RESETTING')">RESET</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/sound?sound=magical whoosh sound.mp3', function(){});">PLAY DING</a>

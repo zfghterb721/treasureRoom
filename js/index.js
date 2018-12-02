@@ -221,3 +221,32 @@ function update(data) {
 			$("#no17").children().html("Brick Mag Off")
 		}
 }
+
+function resetting()
+{
+	$("#resetme").html("RESET")
+}
+
+var count=3600;
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+	if (count == 0){
+		alert("TIME IS UP");}
+     else{}
+     return;
+  }
+	var minutes = Math.floor((count / 60));
+	var seconds = Math.floor((count % 60));
+	if (minutes == 1){
+		mintext=" min ";
+	}
+	else{
+		mintext=" mins ";
+	}
+		
+	document.getElementById("timer").innerHTML= minutes + mintext + seconds + " secs"; 
+
+}
