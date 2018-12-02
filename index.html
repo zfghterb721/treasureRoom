@@ -22,7 +22,6 @@
 
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#" onclick="$.get('http://192.168.1.80:1880/pause', function(data, status){});">PAUSE</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,27 +29,26 @@
         <ul class="navbar-nav mr-auto">
          
           <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/end', function(data, status){});">END</a>
+            <a id= "mutes" class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/toggleSound', function(data, status){});">SOUND</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/reset', function(data, status){});">RESET</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/sound?sound=success.mp3', function(){});">PLAY DING</a>
+            <a class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/sound?sound=magical whoosh sound.mp3', function(){});">PLAY DING</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Manual</a>
+					</li>
+					<li class="nav-item active">
+            <a id= "useHint" class="nav-link" href="#" onclick="$.get('http://192.168.1.80:1880/hintCount?add=-1', function(data, status){});">USE 1 HINT</a>
           </li>
           <li>
 
-			<a id="currentstatus" class="nav-link"><font>Status</font></a>
+			<a id="hintCount" class="nav-link"><font>Hint Count</font></a>
 
 			</li>
         </ul>
-        <form id="hint" class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" style="width:450px" type="text" placeholder="Type Hint Here" aria-label="Hint">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send Hint</button>
-        </form>
       </div>
     </nav>
 
@@ -87,8 +85,8 @@
 </div>
 </div>
 	<div class="col-sm-10">
-	   <iframe src="" height="500" width="90%" seamless="seamless"></iframe>
-	   </div>
+		<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" version="VideoLAN.VLCPlugin.2"  width="100%"  height="100%" id="vlc" loop="yes" autoplay="yes" target="rtsp://admin:Research1@192.168.1.105/cam/realmonitor?channel=1&subtype=0"></embed>	 
+	</div>
 
 
 </div>
@@ -149,9 +147,10 @@
 					<div id="line2"></div>
 					<div id="no29"><div id="no1-1"> Loading</div></div>
 					<div id="line2"></div>
+				<!-- Spare Inputs
 					<div id="no30"><div id="no1-1"> Loading</div></div>
 					<div id="line2"></div>
-			<!-- Spare Inputs
+			
 					<div id="no4"><a href="#">Spare</a></div>
 					<div id="line2"></div>
 					<div id="no5"><a href="#">Spare</a></div>

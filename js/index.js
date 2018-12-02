@@ -10,34 +10,74 @@ $(document).ready(function(){
 	$("#no13").click(function(){$.get('http://192.168.1.81:1880/state?toggle=torch', function(data, status){update(data)});});
 	$("#no14").click(function(){$.get('http://192.168.1.81:1880/state?toggle=blacklight', function(data, status){update(data)});});
 	$("#no15").click(function(){$.get('http://192.168.1.81:1880/state?toggle=exit', function(data, status){update(data)});});
-	$("#no16").click(function(){$.get('http://192.168.1.81:1880/state?toggle=garage', function(data, status){update(data)});});
-	$("#no17").click(function(){$.get('http://192.168.1.81:1880/state?toggle=brickMag', function(data, status){update(data)});});
+	$("#no16").click(function(){$.get('http://192.168.1.80:1880/garage', function(data, status){update(data)});});
+	$("#no17").click(function(){$.get('http://192.168.1.81:1880/state?toggle=brickMag', function(data, status){update(data)});}); 
 
 })
 
 function update(data) { 
 		//main page flow
-		if(data.status=="reset"){
-			$("#currentstatus").css('color','rgb(0,255,0)'),
-			$("#currentstatus").html("Running")
+		if(data.hintCount==0){
+			$("#hintCount").css('color','rgb(255,0,0)'),
+			$("#hintCount").html("Hint Count = 0"),
+			$("#useHint").html("        ")
 		}
 		else{}
-		if(data.status=="pause"){
-			$("#currentstatus").css('color','rgb(255,255,0)'),
-			$("#currentstatus").html("Paused")
+		if(data.hintCount==1){
+			$("#hintCount").css('color','rgb(255,255,0)'),
+			$("#hintCount").html("Hint Count = 1"),
+			$("#useHint").html("USE HINT")
 		}
 		else{}
-		if(data.status=="end"){
-			$("#currentstatus").css('color','rgb(255,0,0)'),
-			$("#currentstatus").html("Ended")
+		if(data.hintCount==2){
+			$("#hintCount").css('color','rgb(0,255,0)'),
+			$("#hintCount").html("Hint Count = 2"),
+			$("#useHint").html("USE HINT")
 		}
 		else{}
-		if(data.status=="resume"){
-			$("#currentstatus").css('color','rgb(0,255,0)'),
-			$("#currentstatus").html("Running")
+		if(data.hintCount==3){
+			$("#hintCount").css('color','rgb(0,255,0)'),
+			$("#hintCount").html("Hint Count = 3"),
+			$("#useHint").html("USE HINT")
 		}
 		else{}
-		
+		if(data.hintCount==4){
+			$("#hintCount").css('color','rgb(0,255,0)'),
+			$("#hintCount").html("Hint Count = 4"),
+			$("#useHint").html("USE HINT")
+		}
+		else{}
+		if(data.hintCount==5){
+			$("#hintCount").css('color','rgb(0,255,0)'),
+			$("#hintCount").html("Hint Count = 5"),
+			$("#useHint").html("USE HINT")
+		}
+		else{}
+		if(data.hintCount==6){
+			$("#hintCount").css('color','rgb(0,255,0)'),
+			$("#hintCount").html("Hint Count = 6"),
+			$("#useHint").html("USE HINT")
+		}
+		else{}
+		if(data.hintCount==7){
+			$("#hintCount").css('color','rgb(0,255,0)'),
+			$("#hintCount").html("Hint Count = 7"),
+			$("#useHint").html("USE HINT")
+		}
+		else{}
+		if(data.hintCount==99){
+			$("#hintCount").css('color','rgb(255,165,0)'),
+			$("#hintCount").html("ORANGE MAN BAD Xd")
+		}
+		else{}
+		if(data.toggleSound==1){
+			$("#mutes").css('color','rgb(0,255,0)'),
+			$("#mutes").html("MUTE")
+		}
+		else{
+			$("#mutes").css('color','rgb(255,0,0)'),
+			$("#mutes").html("UNMUTE")
+		}
 		
 		// main page flow chart buttons
 		if(data.statue==0){
@@ -145,7 +185,7 @@ function update(data) {
 		}
 		
 		//Read and Write states
-		if(data.torch==0){
+		if(data.torch==1){
 			$("#no13").css('background','rgb(0,255,0)'),
 			$("#no13").children().html("Torches on")
 		}
@@ -160,24 +200,24 @@ function update(data) {
 			$("#no14").children().html("Blacklights off")
 		}
 		if(data.exit==1){
-			$("#no15").css('background','rgb(0,255,0)'),
+			$("#no15").css('background','rgb(255,0,0)'),
 			$("#no15").children().html("Exit locked")
 		}
-		else{$("#no15").css('background','rgb(255,0,0)'),
+		else{$("#no15").css('background','rgb(0,255,0)'),
 			$("#no15").children().html("Exit unlocked")
 		}
 		if(data.garage==1){
 			$("#no16").css('background','rgb(0,255,0)'),
-			$("#no16").children().html("Garage On")
+			$("#no16").children().html("Garage Open")
 		}
 		else{$("#no16").css('background','rgb(255,0,0)'),
-			$("#no16").children().html("Garage Off")
+			$("#no16").children().html("Garage Closed")
 		}
 		if(data.brickMag==1){
-			$("#no17").css('background','rgb(0,255,0)'),
+			$("#no17").css('background','rgb(255,0,0)'),
 			$("#no17").children().html("Brick Mag On")
 		}
-		else{$("#no17").css('background','rgb(255,0,0)'),
+		else{$("#no17").css('background','rgb(0,255,0)'),
 			$("#no17").children().html("Brick Mag Off")
 		}
 }
